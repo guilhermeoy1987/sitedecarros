@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #192a56;
+    padding-top: 16px;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+header > .container {
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+}
+
+nav {
+    background-color: #575fcf;
+    padding: 16px 0;
+    display: none;
+}
+
+nav li {
+    list-style: none;
+    display: inline;
+    margin-right: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu-hamburguer {
+    width: 32px;
+    cursor: pointer;
+}
+
+.menu-hamburguer span {
+    height: 2px;
+    width: 100%;
+    background-color: antiquewhite;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.container-flex {
+    display: flex;
+}
+
+#sobre-loja{
+    padding: 48px 450px;
+    margin-bottom: 40px;
+}
+
+#sobre-loja img {
+    width: 400px;
+    margin-right: 24px;
+}
+
+section {
+    padding: 48px 16px;
+    margin-bottom: 120px;
+}
+
+section h2 {
+    margin-bottom: 16px;
+    margin-top: 42px;
+}
+
+.lista-veiculos {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: space-between; 
+}
+
+.lista-veiculos li {
+    list-style: none;
+    flex: 1 1 30%;
+    max-width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    height: 400px; 
+}
+
+.lista-veiculos li img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover; 
+}
+
+.lista-veiculos li h3 {
+    margin: 16px 0;
+    flex-grow: 1; 
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    background-color: #008c4a; /* Verde */
+    transition: background 0.3s ease;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    font-style: italic;
+    border-radius: 16px;
+}
+
+button:hover {
+    background-color: #006c38;
+}
+
+.price {
+    margin: 16px 0;
+    display: block;
+}
+
+.price del {
+    color: #0000009d;
+    font-size: 14px;
+}
+
+#contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 120px;
+}
+
+#contato h2 {
+    margin-bottom: 24px;
+}
+
+form {
+    width: 100%;
+    max-width: 360px;
+}
+
+.form-campo {
+    margin-bottom: 16px;
+}
+
+.form-campo label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.form-campo input,
+.form-campo textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-campo textarea {
+    resize: none;
+    height: 120px;
+}
+
+footer{
+    background-color: #192a56;
+    color: #fff;
+    padding: 16px 0;
+}
+
+footer li{
+    list-style: none;
+    margin-left: 16px;
+}
+
+footer li img{
+    height: 36px;
+}
+
+footer .container{
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .container-flex {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    nav li {
+        display: block;
+        margin: 8px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+
+    .menu-hamburguer {
+        display: block;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .container-flex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
